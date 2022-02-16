@@ -1,0 +1,7 @@
+1] To start the program change the input file name in the program to the input file you want to perform operation on
+
+
+2] change the output file name in the program to get the result in the output file
+
+
+3] After executing program open the output file to check the results

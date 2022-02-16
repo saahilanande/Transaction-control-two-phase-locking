@@ -1,0 +1,27 @@
+Command :b1
+Transaction Begins with ID : 1 :Record is added to Transaction Table with TID= 1 and timestamp= 1 and state = active
+Command :r1
+Transaction 1 acquired a read lock on data item Y
+Command :w1
+Transaction 1 upgraded from read lock to write lock on data item Y
+Command :r1
+Transaction 1 acquired a read lock on data item Z
+Command :b2
+Transaction Begins with ID : 2 :Record is added to Transaction Table with TID= 2 and timestamp= 5 and state = active
+Command :r2
+Transaction 2goes into blocked state (state = Blocked)
+Command :b3
+Transaction Begins with ID : 3 :Record is added to Transaction Table with TID= 3 and timestamp= 7 and state = active
+Command :r3
+Transaction 3 acquired a read lock on data item Zsharing from another transcation
+Command :w1
+Transaction 1goes into blocked state (state = Blocked)
+Command :e1
+Operation e added to queue as transaction 1 is in blocked state
+transcation 1 commited
+Command :w3
+Transaction 3 upgraded from read lock to write lock on data item Z
+Command :e3
+transcation 3 commited
+Command :e3
+Transaction: 3 is already committed

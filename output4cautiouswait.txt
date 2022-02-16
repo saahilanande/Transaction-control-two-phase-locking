@@ -1,0 +1,48 @@
+Command :b1
+Transaction Begins with ID : 1 :Record is added to Transaction Table with TID= 1 and timestamp= 1 and state = active
+Command :r1
+Transaction 1 acquired a read lock on data item Y
+Command :w1
+Transaction 1 upgraded from read lock to write lock on data item Y
+Command :r1
+Transaction 1 acquired a read lock on data item Z
+Command :b2
+Transaction Begins with ID : 2 :Record is added to Transaction Table with TID= 2 and timestamp= 5 and state = active
+Command :r2
+Transaction 2 acquired a read lock on data item X
+Command :w2
+Transaction 2 upgraded from read lock to write lock on data item X
+Command :w1
+Transaction 1 upgraded from read lock to write lock on data item Z
+Command :e1
+transcation 1 commited
+Command :r2
+Transaction 2 acquired a read lock on data item Y
+Command :b3
+Transaction Begins with ID : 3 :Record is added to Transaction Table with TID= 3 and timestamp= 11 and state = active
+Command :r3
+Transaction 3 acquired a read lock on data item Z
+Command :w3
+Transaction 3 upgraded from read lock to write lock on data item Z
+Command :w2
+Transaction 2 upgraded from read lock to write lock on data item Y
+Command :e2
+transcation 2 commited
+Command :b4
+Transaction Begins with ID : 4 :Record is added to Transaction Table with TID= 4 and timestamp= 16 and state = active
+Command :w4
+Transaction 4 acquired a read lock on data item Y
+Transaction 4goes into blocked state (state = Blocked)
+Command :r3
+Transaction 3 acquired a read lock on data item X
+Command :w3
+Transaction 3 upgraded from read lock to write lock on data item X
+Command :e3
+transcation 3 commited
+Command :w4
+Operation w added to queue as transaction 4 is in blocked state
+Command :e4
+Operation e added to queue as transaction 4 is in blocked state
+transcation 4 commited
+Command :e4
+Transaction: 4 is already committed
